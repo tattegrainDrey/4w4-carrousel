@@ -9,7 +9,6 @@
     transform : scale(0);
     transition : transform .5s;
 }
-
 .carrousel--activer {
     transform : scale(1);
 }
@@ -40,10 +39,6 @@
  .carrousel__img--activer {
     opacity: 1;
  }
-
-.carrousel--activer {
-    transform: scale(1);
-  }
   
   .carrousel__form {
     position: absolute;

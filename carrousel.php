@@ -42,8 +42,7 @@ wp_enqueue_scripts // le hook qui permettra d'enfiler le css et le script
 
     function genere_boite()
     {
-        return "<button class='carrousel__ouvrir' onclick='window.scrollTo(0, 0);'> Ouvrir Carrousel</button>
-                <div class='carrousel'>
+        return "<div class='carrousel'>
                     <button class='carrousel__x'> X </button>
                     <figure class='carrousel__figure'></figure>
                     <form class='carrousel__form'></form>
