@@ -13,6 +13,7 @@
   let index = 0
   let ancien_index = -1
   let position = 0
+  let ajoute = false
 
   carrousel__ouvrir.addEventListener('mousedown', ouvrirCarrousel)
 
@@ -20,7 +21,10 @@
     window.scrollTo(0, 0)
     carrousel.classList.add('carrousel--activer')
     carrousel__ouvrir.removeEventListener('mousedown', ouvrirCarrousel)
-    ajouter_les_images_de_galerie()
+    if (ajoute == false) {
+      ajouter_les_images_de_galerie()
+    }
+    
   }
 
   carrousel__x.addEventListener('mousedown', function () {
@@ -29,6 +33,7 @@
   })
 
   function ajouter_les_images_de_galerie() {
+    ajoute = true;
     for (const elem of galerie__img) {
       elem.dataset.index = position
       elem.addEventListener('mousedown', function () {
