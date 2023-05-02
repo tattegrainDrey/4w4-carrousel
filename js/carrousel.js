@@ -14,14 +14,18 @@
   let ancien_index = -1
   let position = 0
 
-  carrousel__ouvrir.addEventListener('mousedown', function () {
+  carrousel__ouvrir.addEventListener('mousedown', ouvrirCarrousel)
+
+  function ouvrirCarrousel() {
     window.scrollTo(0, 0)
     carrousel.classList.add('carrousel--activer')
+    carrousel__ouvrir.removeEventListener('mousedown', ouvrirCarrousel)
     ajouter_les_images_de_galerie()
-  })
+  }
 
   carrousel__x.addEventListener('mousedown', function () {
     carrousel.classList.remove('carrousel--activer')
+    carrousel__ouvrir.addEventListener('mousedown', ouvrirCarrousel)
   })
 
   function ajouter_les_images_de_galerie() {
@@ -59,7 +63,6 @@
       index = this.dataset.index
       afficher_image(index)
     })
-    console.log('index :' + index)
 
   }
 
