@@ -43,7 +43,9 @@ wp_enqueue_scripts // le hook qui permettra d'enfiler le css et le script
     function genere_boite()
     {
         return "<div class='carrousel'>
-                    <button class='carrousel__x'> &#9747; </button>
+                    <button class='carrousel__x'> &#10006; </button>
+                    <button class='carrousel__pre'> &#9754; </button>
+                    <button class='carrousel__sui'> &#9755; </button>
                     <figure class='carrousel__figure'></figure>
                     <form class='carrousel__form'></form>
                 </div>";

@@ -8,25 +8,39 @@
     background-color: #001858;
     transform: scale(0);
     transition: transform 0.5s;
-  }
-  
-  .carrousel--activer {
+}
+
+.carrousel--activer {
     transform: scale(1);
-  }
-  
-  .carrousel__x {
+}
+
+.carrousel__x {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: .5em;
+    right: .5em;
     z-index: 3;
-  }
-  
-  .carrousel__figure {
+}
+
+.carrousel__sui {
+    position: absolute;
+    top: 10em;
+    right: .5em;
+    z-index: 3;
+}
+
+.carrousel__pre {
+    position: absolute;
+    top: 10em;
+    left: .5em;
+    z-index: 3;
+}
+
+.carrousel__figure {
     width: auto;
     height: 100%;
-  }
-  
-  .carrousel__img {
+}
+
+.carrousel__img {
     position: absolute;
     object-fit: contain;
     width: 100%;
@@ -35,24 +49,24 @@
     opacity: 0;
     transform: opacity 0.5s;
     background-position: center center;
-  }
-  
-  .carrousel__img--activer {
+}
+
+.carrousel__img--activer {
     opacity: 1;
-  }
-  
-  .carrousel--activer {
+}
+
+.carrousel--activer {
     transform: scale(1);
-  }
-  
-  .carrousel__form {
+}
+
+.carrousel__form {
     position: absolute;
     bottom: 0;
     text-align: center;
     width: 100%;
-  }
-  
-  .carrousel__radio {
+}
+
+.carrousel__radio {
     display: inline-block;
     margin: 5px;
-  }
+}
