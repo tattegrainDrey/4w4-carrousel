@@ -6,6 +6,9 @@
   let carrousel__x = document.querySelector('.carrousel__x')
   let carrousel__figure = document.querySelector('.carrousel__figure')
   let carrousel__form = document.querySelector('.carrousel__form')
+  let carrousel__pre = document.querySelector('.carrousel__pre')
+  let carrousel__sui = document.querySelector('.carrousel__sui')
+  
 
   let galerie = document.querySelector('.blocflex__galerie')
   let galerie__img = galerie.querySelectorAll('img')
@@ -44,6 +47,7 @@
      
       creation_carrousel_avec_images_de_galerie(elem)
       creation_boutons_radio_carrousel()
+      gerer_fleches()
     }
   }
 
@@ -68,7 +72,21 @@
       index = this.dataset.index
       afficher_image(index)
     })
+  }
 
+  function gerer_fleches(){
+    //boutons suivant et precedent 
+    carrousel__sui.dataset.index = position
+    position = position + 1
+    carrousel__sui.addEventListener('mousedown', function(){
+      index = this.dataset.index
+    })
+
+    carrousel__pre.dataset.index = position
+    position = position - 1
+    carrousel__pre.addEventListener('mousedown', function(){
+      index = this.dataset.index
+    })
   }
 
   function afficher_image(index) {
