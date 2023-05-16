@@ -20,6 +20,22 @@
 
   carrousel__ouvrir.addEventListener('mousedown', ouvrirCarrousel)
 
+  carrousel__pre.addEventListener('mousedown', function(){
+    index = index-1
+    if (index ==-1){
+      index = galerie__img.length-1
+    }
+    afficher_image(index)
+   })
+
+  carrousel__sui.addEventListener('mousedown', function(){
+    index = parseInt(index)+1
+    if(index==galerie__img.length){
+      index = 0;
+    }
+    afficher_image(index)
+  })
+
   function ouvrirCarrousel() {
     window.scrollTo(0, 0)
     carrousel.classList.add('carrousel--activer')
@@ -47,7 +63,6 @@
      
       creation_carrousel_avec_images_de_galerie(elem)
       creation_boutons_radio_carrousel()
-      gerer_fleches()
     }
   }
 
@@ -71,21 +86,6 @@
     radio.addEventListener('mousedown', function () {
       index = this.dataset.index
       afficher_image(index)
-    })
-  }
-
-  function gerer_fleches(){
-    //boutons suivant et precedent 
-    carrousel__sui.dataset.index = position
-    position = position + 1
-    carrousel__sui.addEventListener('mousedown', function(){
-      index = this.dataset.index
-    })
-
-    carrousel__pre.dataset.index = position
-    position = position - 1
-    carrousel__pre.addEventListener('mousedown', function(){
-      index = this.dataset.index
     })
   }
 
